@@ -4,12 +4,11 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/pio/plib_pio.h \
  ../src/config/default/device.h \
  ../src/packs/ATSAME70Q21B_DFP/same70q21b.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm7.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/mpu_armv7.h \
  ../src/packs/ATSAME70Q21B_DFP/component/acc.h \
  ../src/packs/ATSAME70Q21B_DFP/component/aes.h \
  ../src/packs/ATSAME70Q21B_DFP/component/afec.h \
@@ -105,14 +104,13 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/packs/ATSAME70Q21B_DFP/pio/same70q21b.h \
  ../src/config/default/device_cache.h ../src/config/default/device.h \
  ../src/config/default/toolchain_specifics.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
  ../src/config/default/peripheral/nvic/plib_nvic.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi0_master.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h \
  ../src/config/default/peripheral/efc/plib_efc.h \
  ../src/config/default/peripheral/usart/plib_usart1.h \
- ../src/config/default/peripheral/usart/plib_usart_common.h \
- ../src/usr/print_fuction.h
+ ../src/config/default/peripheral/usart/plib_usart_common.h
 
 ../src/config/default/definitions.h:
 
@@ -124,17 +122,15 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/packs/ATSAME70Q21B_DFP/same70q21b.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm7.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h:
-
-../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/mpu_armv7.h:
 
 ../src/packs/ATSAME70Q21B_DFP/component/acc.h:
 
@@ -328,7 +324,7 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/toolchain_specifics.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
 ../src/config/default/peripheral/nvic/plib_nvic.h:
 
@@ -341,5 +337,3 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 ../src/config/default/peripheral/usart/plib_usart1.h:
 
 ../src/config/default/peripheral/usart/plib_usart_common.h:
-
-../src/usr/print_fuction.h:

@@ -1,0 +1,173 @@
+configVersion: 1.0.0
+componentName: spi0
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: spi0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.22.5
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: spi0
+          x: '640'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SPI_CSR0_CSAAT:
+      attributes:
+        id: SPI_CSR0_CSAAT
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SPI_CSR0_CSNAAT:
+      attributes:
+        id: SPI_CSR0_CSNAAT
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SPI_CSR0_SCBR_VALUE:
+      attributes:
+        id: SPI_CSR0_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_CSR1_SCBR_VALUE:
+      attributes:
+        id: SPI_CSR1_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_CSR2_SCBR_VALUE:
+      attributes:
+        id: SPI_CSR2_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_CSR3_SCBR_VALUE:
+      attributes:
+        id: SPI_CSR3_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_CSR_INDEX:
+      attributes:
+        id: SPI_CSR_INDEX
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_EN_NPCS1:
+      attributes:
+        id: SPI_EN_NPCS1
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SPI_EN_NPCS2:
+      attributes:
+        id: SPI_EN_NPCS2
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SPI_EN_NPCS3:
+      attributes:
+        id: SPI_EN_NPCS3
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SPI_MR_DLYBCS:
+      attributes:
+        id: SPI_MR_DLYBCS
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: Integer
+    SPI_NUM_CSR:
+      attributes:
+        id: SPI_NUM_CSR
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
