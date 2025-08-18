@@ -1,11 +1,12 @@
 build/default/debug/_ext/1171490990/libc_syscalls.o: \
  ../src/config/default/libc_syscalls.c ../src/config/default/device.h \
  ../src/packs/ATSAME70Q21B_DFP/same70q21b.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm7.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/mpu_armv7.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h \
+ ../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h \
  ../src/packs/ATSAME70Q21B_DFP/component/acc.h \
  ../src/packs/ATSAME70Q21B_DFP/component/aes.h \
  ../src/packs/ATSAME70Q21B_DFP/component/afec.h \
@@ -101,21 +102,23 @@ build/default/debug/_ext/1171490990/libc_syscalls.o: \
  ../src/packs/ATSAME70Q21B_DFP/pio/same70q21b.h \
  ../src/config/default/device_cache.h \
  ../src/config/default/toolchain_specifics.h \
- C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h
+ ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h
 
 ../src/config/default/device.h:
 
 ../src/packs/ATSAME70Q21B_DFP/same70q21b.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm7.h:
+../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h:
+../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
+../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h:
+../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/mpu_armv7.h:
+../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h:
+
+../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h:
 
 ../src/packs/ATSAME70Q21B_DFP/component/acc.h:
 
@@ -307,4 +310,4 @@ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Includ
 
 ../src/config/default/toolchain_specifics.h:
 
-C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
+../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:

@@ -3,13 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/main.c</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/config/default/peripheral/spi/spi_master/plib_spi0_master.c</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/usr/print_fuction.h</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/config/default/pin_configurations.csv</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/config/default/peripheral/usart/plib_usart_common.h</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/config/default/peripheral/usart/plib_usart1.h</file>
-            <file>file:/C:/Users/iammap/MPLABXProjects/Project1/src/usr/print_fuction.c</file>
+            <file>file:/C:/Users/iammap/MPLABXProjects/same70_spi/src/main.c</file>
         </group>
     </open-files>
 </project-private>
