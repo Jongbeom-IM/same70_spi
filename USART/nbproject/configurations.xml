@@ -242,6 +242,8 @@
       <itemPath>../src/usr/rb.h</itemPath>
       <itemPath>../src/usr/delay.c</itemPath>
       <itemPath>../src/usr/delay.h</itemPath>
+      <itemPath>../src/usr/spi_common.c</itemPath>
+      <itemPath>../src/usr/spi_common.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

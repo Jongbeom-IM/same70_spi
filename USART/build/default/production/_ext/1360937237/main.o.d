@@ -112,7 +112,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/efc/plib_efc.h \
  ../src/config/default/peripheral/usart/plib_usart1.h \
  ../src/config/default/peripheral/usart/plib_usart_common.h \
- ../src/usr/print_fuction.h ../src/usr/rb.h ../src/usr/delay.h
+ ../src/usr/print_fuction.h ../src/usr/rb.h ../src/usr/delay.h \
+ ../src/usr/spi_common.h
 
 ../src/config/default/definitions.h:
 
@@ -347,3 +348,5 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/usr/rb.h:
 
 ../src/usr/delay.h:
+
+../src/usr/spi_common.h:
