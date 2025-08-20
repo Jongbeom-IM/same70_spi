@@ -1,6 +1,7 @@
 #ifndef USART1_CUSTOM_H
 #define USART1_CUSTOM_H
 
+#include <stddef.h>
 #include <stdint.h>
 
 void USART1_WriteBlock(const void* buf, size_t len);

@@ -25,23 +25,18 @@ void USART1_WriteHex8(uint8_t v)
     USART1_WriteBlock(out, sizeof out);
 }
 
-void USART1_WriteHexDump(const uint8_t *p, size_t n)
-{
-    static const char hex[] = "0123456789ABCDEF";
-    char line[3*16 + 2];              // "XX " * 16 + "\r\n"
-    while (n) {
-        size_t chunk = (n > 16) ? 16 : n;
-        size_t pos = 0;
-        for (size_t i = 0; i < chunk; ++i) {
-            uint8_t b = *p++;
-            line[pos++] = hex[(b >> 4) & 0xF];
-            line[pos++] = hex[b & 0xF];
-            line[pos++] = ' ';
-        }
-        line[pos++] = '\r';
-        line[pos++] = '\n';
-        USART1_WriteBlock(line, pos);
-        n -= chunk;
+static inline char hex_nib(uint8_t v) { 
+    return (v < 10) ? ('0' + v) : ('A' + (v - 10)); 
+}
+
+void USART1_WriteHexDump(const uint8_t* p, size_t n){
+    char out[3];
+    for (size_t i = 0; i < n; i++) {
+        out[0] = hex_nib((uint8_t)(p[i] >> 4));
+        out[1] = hex_nib((uint8_t)(p[i] & 0x0F));
+        out[2] = ' ';
+        while (USART1_WriteIsBusy()) { }
+        USART1_Write(out, sizeof(out));
     }
 }
 
