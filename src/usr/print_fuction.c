@@ -29,14 +29,16 @@ static inline char hex_nib(uint8_t v) {
     return (v < 10) ? ('0' + v) : ('A' + (v - 10)); 
 }
 
-void USART1_WriteHexDump(const uint8_t* p, size_t n){
+void USART1_WriteHexDump(const uint8_t* p, size_t n)
+{
     char out[3];
     for (size_t i = 0; i < n; i++) {
-        out[0] = hex_nib((uint8_t)(p[i] >> 4));
-        out[1] = hex_nib((uint8_t)(p[i] & 0x0F));
+        static const char H[] = "0123456789ABCDEF";
+        out[0] = H[p[i] >> 4];
+        out[1] = H[p[i] & 0x0F];
         out[2] = ' ';
-        while (USART1_WriteIsBusy()) { }
-        USART1_Write(out, sizeof(out));
+        while (USART1_WriteIsBusy()) {}
+        USART1_Write(out, 3);     
     }
 }
 
@@ -50,4 +52,17 @@ void USART1_WriteNumber(uint8_t num)
     buf[len++] = '\r';
     buf[len++] = '\n';
     USART1_WriteBlock(buf, (size_t)len);
+}
+
+void USART1_WriteDecDump(const uint8_t* p, size_t n){
+    char buf[5];
+    for (size_t i = 0; i < n; i++) {
+        int len = 0;
+        if (p[i] >= 100) { buf[len++] = '0' + (p[i] / 100); p[i] %= 100; }
+        if (len || p[i] >= 10) { buf[len++] = '0' + (p[i] / 10); p[i] %= 10; }
+        buf[len++] = '0' + p[i];
+        buf[len++] = '\r';
+        buf[len++] = '\n';
+        USART1_WriteBlock(buf, (size_t)len);
+    }
 }

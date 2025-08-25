@@ -25,36 +25,20 @@ static RingBuffer rxRB;
 int main(void)
 {
     SYS_Initialize(NULL);
+    SPI0_REGS->SPI_MR &= ~SPI_MR_LLB(1);
     rb_init_static(&rxRB, rb_storage, sizeof(rb_storage));
     USART1_WriteString("\n@SAME70 SPI->UART with rb.c\r");
     delay_init(300000000);
+    
+//    const uint8_t tx[] = { 0xDE, 0xAD, 0xBE, 0xEF };
+    uint8_t rx[257];
 
-    const uint8_t tx[] = { 0xDE, 0xAD, 0xBE, 0xEF };
-    uint8_t rx[sizeof(tx)];
-
-    while (1) {
-        delay_ms(3000);
-        USART1_WriteString("\ndelay 3s\r\n");
-
-//        memset(rx, 0, sizeof(rx));
-//        if (SPI0_BlockingFullDuplex(tx, rx, sizeof(tx))) {
-//            USART1_WriteString("FD OK, RX: ");
-//            USART1_WriteHexDump(rx, sizeof(rx));
-//            while (USART1_WriteIsBusy()) { }   // Flush
-//            USART1_WriteString("\r\n");
-//        } else {
-//            USART1_WriteString("FD FAIL\r\n");
-//        }
-
-        // ? ?? ????: ????? ??? ?? ??? ????? '??'
-        memset(rx, 0, sizeof(rx));
-        if (SPI0_ReadBlocking(rx, sizeof(rx))) {     // << ?? TX? ?? ??
-            USART1_WriteString("RD OK, RX: ");
-            USART1_WriteHexDump(rx, sizeof(rx));
-            while (USART1_WriteIsBusy()) { }   // Flush
-            USART1_WriteString("\r\n");
-        } else {
-            USART1_WriteString("RD FAIL\r\n");
-        }
+    memset(rx, 0x0, sizeof(rx));
+    if (SPI0_Read((void*)rx, sizeof(rx))) {  
+        while (USART1_WriteIsBusy()) { }
+        USART1_Write((void*)rx, sizeof(rx));  
+        while (USART1_WriteIsBusy()) { }
+    } else {
+        USART1_WriteString("RD FAIL\r\n");
     }
 }

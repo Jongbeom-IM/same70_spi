@@ -40,31 +40,31 @@ bool SPI0_BlockingFullDuplex(const uint8_t* src, uint8_t* dst, size_t n)
     return true;
 }
 
-bool SPI0_ReadBlocking(uint8_t* dst, size_t n)
-{
-    // ?? ???? ?? ?? (0xFF ??)
-    // n? ??? ??, ?? ??? ????.
-    uint8_t dummy[64];
-    bool ok = true;
-    
+bool SPI0_ReadBlocking(uint8_t* dst, size_t n) {
+    static uint8_t dummy[64];
+    memset(dummy, 0xFF, sizeof(dummy));
+
 #if USE_GPIO_CS
     CS_LOW();
 #endif
+    for (volatile int i=0;i<300;i++) __asm__ __volatile__("nop"); // SS settle ~? µs
 
     size_t rem = n;
     while (rem) {
-        size_t chunk = (rem > sizeof(dummy)) ? sizeof(dummy) : rem;
-        memset(dummy, 0xFF, chunk);
-
-        bool started = SPI0_WriteRead(dummy, chunk, dst + (n - rem), chunk);
-        if (!started) { ok = false; break; }
-
-        while (SPI0_IsBusy()) { } // ??? ??
+        size_t chunk = rem > sizeof(dummy) ? sizeof(dummy) : rem;
+        bool ok = SPI0_WriteRead(dummy, chunk, dst + (n - rem), chunk);
+        if (!ok) { 
+#if USE_GPIO_CS
+            CS_HIGH();
+#endif
+            return false; 
+        }
+        while (SPI0_IsBusy()) {}
         rem -= chunk;
     }
-    
+
 #if USE_GPIO_CS
     CS_HIGH();
 #endif
-    return ok;
+    return true;
 }

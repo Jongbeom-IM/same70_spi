@@ -71,7 +71,7 @@ void SPI0_Initialize( void )
     SPI0_REGS->SPI_MR = SPI_MR_MSTR_Msk | SPI_MR_DLYBCS(0) | SPI_MR_PCS_NPCS0  | SPI_MR_MODFDIS_Msk;
 
     /* Set up clock Polarity, data phase, Communication Width, Baud Rate */
-    SPI0_REGS->SPI_CSR[0] = SPI_CSR_CPOL_IDLE_LOW | SPI_CSR_NCPHA_VALID_LEADING_EDGE | SPI_CSR_BITS_8_BIT | SPI_CSR_SCBR(150)| SPI_CSR_DLYBS(0) | SPI_CSR_DLYBCT(0)  | SPI_CSR_CSAAT(1) ;
+    SPI0_REGS->SPI_CSR[0] = SPI_CSR_CPOL_IDLE_LOW | SPI_CSR_NCPHA_VALID_LEADING_EDGE | SPI_CSR_BITS_8_BIT | SPI_CSR_SCBR(255)| SPI_CSR_DLYBS(128) | SPI_CSR_DLYBCT(128)  | SPI_CSR_CSAAT(1) ;
 
 
 
@@ -143,7 +143,7 @@ bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, siz
             }
             else if (spi0Obj.dummySize > 0U)
             {
-                SPI0_REGS->SPI_TDR = (uint8_t)(0xff);
+                SPI0_REGS->SPI_TDR = (uint8_t)(0x0);
                 spi0Obj.dummySize--;
             }
             else
@@ -166,7 +166,7 @@ bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, siz
             }
             else if (spi0Obj.dummySize > 0U)
             {
-                SPI0_REGS->SPI_TDR = (uint16_t)(0xffff);
+                SPI0_REGS->SPI_TDR = (uint16_t)(0x00);
                 spi0Obj.dummySize--;
             }
             else
@@ -304,7 +304,7 @@ void __attribute__((used)) SPI0_InterruptHandler( void )
             }
             else if (spi0Obj.dummySize > 0U)
             {
-                SPI0_REGS->SPI_TDR = (uint8_t)(0xff);
+                SPI0_REGS->SPI_TDR = (uint8_t)(0x0);
                 spi0Obj.dummySize--;
             }
             else
@@ -321,7 +321,7 @@ void __attribute__((used)) SPI0_InterruptHandler( void )
             }
             else if (spi0Obj.dummySize > 0U)
             {
-                SPI0_REGS->SPI_TDR = (uint16_t)(0xffff);
+                SPI0_REGS->SPI_TDR = (uint16_t)(0x00);
                 spi0Obj.dummySize--;
             }
             else
