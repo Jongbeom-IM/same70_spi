@@ -61,7 +61,7 @@ int main(void)
     (void)u_ok4;
     USART0_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_us0);
     bool us_ok0 = UART1_Read(g_us0.rxBuf, RX_CHUNK);   
-    (void)us_ok0; // false? ?? busy ? ?? ? ???
+    (void)us_ok0; 
     USART2_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_us2);
     bool us_ok2 = UART1_Read(g_us2.rxBuf, RX_CHUNK);   
     (void)us_ok2; 
