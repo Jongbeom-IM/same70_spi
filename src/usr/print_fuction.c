@@ -58,8 +58,14 @@ void USART1_WriteDecDump(const uint8_t* p, size_t n){
     char buf[5];
     for (size_t i = 0; i < n; i++) {
         int len = 0;
-        if (p[i] >= 100) { buf[len++] = '0' + (p[i] / 100); p[i] %= 100; }
-        if (len || p[i] >= 10) { buf[len++] = '0' + (p[i] / 10); p[i] %= 10; }
+        if (p[i] >= 100) { 
+            buf[len++] = '0' + (p[i] / 100); 
+            p[i] %= 100; 
+        }
+        if (len || p[i] >= 10) { 
+            buf[len++] = '0' + (p[i] / 10); 
+            p[i] %= 10; 
+        }
         buf[len++] = '0' + p[i];
         buf[len++] = '\r';
         buf[len++] = '\n';

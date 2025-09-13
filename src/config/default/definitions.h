@@ -48,12 +48,18 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/uart/plib_uart3.h"
+#include "peripheral/uart/plib_uart4.h"
+#include "peripheral/uart/plib_uart1.h"
+#include "peripheral/uart/plib_uart2.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/spi/spi_master/plib_spi0_master.h"
 #include "peripheral/efc/plib_efc.h"
 #include "peripheral/usart/plib_usart1.h"
+#include "peripheral/usart/plib_usart0.h"
+#include "peripheral/usart/plib_usart2.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
