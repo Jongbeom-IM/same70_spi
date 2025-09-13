@@ -48,23 +48,23 @@ int main(void)
     rb_init_static(&rxRB, rb_storage, sizeof(rb_storage));
     
     UART1_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_u1);
-    bool u_ok1 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   // ? ??? Read
-    (void)u_ok1; // false? ?? busy ? ?? ? ???
+    bool u_ok1 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   
+    (void)u_ok1; 
     UART2_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_u2);
-    bool u_ok2 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   // ? ??? Read
-    (void)u_ok2; // false? ?? busy ? ?? ? ???
+    bool u_ok2 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   
+    (void)u_ok2; 
     UART3_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_u3);
-    bool u_ok3 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   // ? ??? Read
-    (void)u_ok3; // false? ?? busy ? ?? ? ???
+    bool u_ok3 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   
+    (void)u_ok3; 
     UART4_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_u4);
-    bool u_ok4 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   // ? ??? Read
-    (void)u_ok4; // false? ?? busy ? ?? ? ???
+    bool u_ok4 = UART1_Read(g_u1.rxBuf, RX_CHUNK);   
+    (void)u_ok4;
     USART0_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_us0);
-    bool us_ok0 = UART1_Read(g_us0.rxBuf, RX_CHUNK);   // ? ??? Read
+    bool us_ok0 = UART1_Read(g_us0.rxBuf, RX_CHUNK);   
     (void)us_ok0; // false? ?? busy ? ?? ? ???
     USART2_ReadCallbackRegister(US_RxCallback, (uintptr_t)&g_us2);
-    bool us_ok2 = UART1_Read(g_us2.rxBuf, RX_CHUNK);   // ? ??? Read
-    (void)us_ok2; // false? ?? busy ? ?? ? ???
+    bool us_ok2 = UART1_Read(g_us2.rxBuf, RX_CHUNK);   
+    (void)us_ok2; 
     
     USART1_WriteString("\n@SAME70 SPI->UART with rb.c\r");
     delay_init(300000000);
