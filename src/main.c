@@ -25,18 +25,22 @@ static RingBuffer rxRB;
 typedef struct{
     volatile bool rxDone;
     uint8_t       rxBuf[RX_CHUNK];
+    uint8_t       portId;
 }us_port_t;
 
-static us_port_t g_u1 = {0};
-static us_port_t g_u2 = {0};
-static us_port_t g_u3 = {0};
-static us_port_t g_u4 = {0};
-static us_port_t g_us0 = {0};
-static us_port_t g_us2 = {0};
+static us_port_t g_us0 = { .rxDone = false, .portId = 0 };
+static us_port_t g_us2 = { .rxDone = false, .portId = 2 };
+static us_port_t g_u1 = { .rxDone = false, .portId = 1 };
+static us_port_t g_u2 = { .rxDone = false, .portId = 2 };
+static us_port_t g_u3 = { .rxDone = false, .portId = 3 };
+static us_port_t g_u4 = { .rxDone = false, .portId = 4 };
 
 /* ===== Callback ===== */
 static void US_RxCallback(uintptr_t context){
     us_port_t* usp = (us_port_t*)context;
+    char msg[32];
+    sprintf(msg, "UART%u RX done\r\n", usp->portId);
+    USART1_WriteString(msg);
     usp->rxDone = true;
 }
 

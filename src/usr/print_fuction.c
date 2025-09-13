@@ -54,7 +54,7 @@ void USART1_WriteNumber(uint8_t num)
     USART1_WriteBlock(buf, (size_t)len);
 }
 
-void USART1_WriteDecDump(const uint8_t* p, size_t n){
+void USART1_WriteDecDump(uint8_t* p, size_t n){
     char buf[5];
     for (size_t i = 0; i < n; i++) {
         int len = 0;
